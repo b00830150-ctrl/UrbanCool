@@ -1,51 +1,17 @@
 name,product_category,estimated_price_eur,reliability_score,delivery_time_days,sustainability_score,certification_quality_score
 Danone,Dairy,2.5,9,3,8,9
 Lactalis,Dairy,2.1,9,4,7,9
+Sodiaal,Dairy,2.3,8,4,7,8
 Groupe Bel,Cheese,3.0,8,4,7,8
-Bonduelle,Vegetables,1.8,8,5,8,8
-Fleury Michon,Prepared Foods,4.5,8,5,6,8
 Savencia Fromage & Dairy,Cheese,3.2,8,5,7,8
+Bongrain,Cheese,3.3,8,4,7,8
+Bonduelle,Vegetables & Fruits,1.8,8,5,8,8
+Les Crudettes,Vegetables & Fruits,2.6,6,4,8,6
+Agrial,Vegetables & Fruits,2.0,7,5,7,7
+Fleury Michon,Prepared Foods,4.5,8,5,6,8
+Sodebo,Prepared Foods,3.9,7,5,6,7
+Davigel,Prepared Foods,4.0,8,4,6,8
 Groupe Avril,Oils & Proteins,2.9,7,6,6,7
-Tereos,Sugars & Ingredients,1.2,8,7,6,8
-Cristal Union,Sugars & Ingredients,1.1,7,8,5,7
-Soufflet,Grains & Ingredients,1.6,8,6,6,8
-Vilmorin & Cie,Seeds & Inputs,10.0,8,10,6,9
-Limagrain,Seeds & Ingredients,9.5,8,9,6,9
-Sodiaal,Dairy Cooperative,2.3,8,4,7,8
-Andros,Fruit Preparations,3.8,7,5,7,7
-Materne,Preserves & Fruit,3.2,7,5,6,7
-Davigel,Frozen & Foodservice,4.0,8,4,6,8
-Groupe Bigard,Meat Processing,5.5,7,6,5,8
-Charal,Meat,5.3,8,5,5,8
-Cooperl Arc Atlantique,Pork / Meat,5.0,7,6,5,7
-InVivo,Agri Services,2.0,7,7,6,7
-Lesaffre,Yeasts & Fermentation,6.0,8,6,7,9
-Poult,Biscuits & Ingredients,2.8,7,6,6,7
-Picard Surgelés,Frozen Retail,4.2,9,3,6,8
-Panzani,Pasta & Sauces,1.9,8,4,6,8
-LDC (Groupe LDC),Poultry & Processed,4.8,8,5,6,8
-Sodebo,Ready Meals,3.9,7,5,6,7
-Agromousquetaires,Food Manufacture & Supply,3.0,7,5,6,7
-Groupe Roullier,Agricultural Inputs,2.5,7,7,5,7
-Bongrain (Savencia brand),Cheese,3.3,8,4,7,8
-Les Crudettes,Fresh Veg & Salads,2.6,6,4,8,6
-Système U (supplier network),Retail Supply,3.5,8,4,6,8
-Casino (supply arm),Retail Supply,3.6,7,4,6,7
-Carrefour Supply (supplier),Retail Supply,3.4,8,4,6,8
-Euralis,Seeds & Oils,2.2,7,6,6,7
-Tarkett? ,Misc,3.0,5,7,5,5
-(BLOCKED_INVALID),Misc,0,0,0,0,0
-Saputo France,Dairy (subsidiary),2.7,7,5,6,7
-La Boulangère,Bakery Products,2.4,7,4,6,7
-Groupe Holder (Paul),Bakery & Retail,3.1,8,3,6,8
-Laïta (Brittany cooperative),Dairy Coop,2.2,8,4,7,8
-Bongard? ,Bakery Machines,4.5,6,8,5,6
-Lactoprot,Ingredients,3.0,6,6,6,6
-St Mamet,Preserves & Fruit,3.1,6,5,7,6
-Sicasil,Ingredients & Packaging,2.9,6,7,6,6
-Danival,Organic Food,3.8,7,5,8,8
-Compagnie Fruitière,Fruits & Export,2.6,7,8,7,7
-CID Lait,Cheese & Dairy,2.5,7,5,7,7
-Sabarot,Pulses & Legumes,2.0,8,5,7,8
-Valrhona,Chocolate & Ingredients,12.0,9,6,7,9
-Groupe Eurial,Dairy & Ingredients,2.6,7,5,7,7
+InVivo,Oils & Proteins,2.0,7,7,6,7
+Euralis,Oils & Proteins,2.2,7,6,6,7
+...
