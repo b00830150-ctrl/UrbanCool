@@ -98,9 +98,15 @@ df['score'] = (
 df_sorted = df.sort_values(by='score', ascending=False)
 
 # Display top results
-st.subheader("🏆 Top suppliers (by computed score)")
-top_n = st.slider("How many top suppliers to show", 3, 20, 10)
-st.dataframe(df_sorted.head(top_n)[['name','product_category','estimated_price_eur','reliability_score','delivery_time_days','sustainability_score','certification_quality_score','score']].reset_index(drop=True))
+# Top suppliers (scrollable)
+st.subheader("🏆 Top suppliers (scrollable)")
+top_n = st.slider("How many top suppliers to show", 3, 50, 10)  # tu peux aller jusqu'à 50
+st.dataframe(df_sorted.head(top_n)[['name','product_category','estimated_price_eur','reliability_score','delivery_time_days','sustainability_score','certification_quality_score','score']], height=600)
+
+# Full dataset download
+st.subheader("📥 Full filtered dataset (downloadable)")
+csv = df_sorted.to_csv(index=False).encode('utf-8')
+st.download_button("Download all filtered suppliers (CSV)", data=csv, file_name="suppliers_france_agro_filtered.csv", mime='text/csv')
 
 # Simple bar chart of top 10 scores
 st.subheader("Score breakdown for top suppliers")
