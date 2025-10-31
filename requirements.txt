@@ -7,4 +7,4 @@ matplotlib
 folium
 pillow>=10
 scikit-learn
-
+rasterstats
