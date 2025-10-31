@@ -227,8 +227,14 @@ if run_btn:
         intensity_means = [s.get('mean') if s.get('mean') is not None else 0.0 for s in intensity_stats]
         pop_sums = compute_population_exposure(uhi_raster_crs, pop_ds, pop_arr, temp_transform) if pop_arr is not None else [g.area for g in uhi_raster_crs.geometry]
         lc_doms = landcover_dominant_for_polygons(uhi_raster_crs, lc_arr, temp_transform) if lc_arr is not None else [np.nan]*len(uhi_raster_crs)
-        if built_arr is not None:
-    built_stats = zonal_stats(uhi_raster_crs.geometry, built_arr, affine=temp_transform, stats=['mean'], nodata=np.nan)
+     if built_arr is not None:
+    built_stats = zonal_stats(
+        uhi_raster_crs.geometry,
+        built_arr,
+        affine=temp_transform,
+        stats=['mean'],
+        nodata=np.nan
+    )
     built_means = [s.get('mean') if s.get('mean') is not None else 0.0 for s in built_stats]
 else:
     built_means = [None] * len(uhi_raster_crs)
