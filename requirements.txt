@@ -1,0 +1,17 @@
+streamlit==1.24.0
+numpy
+pandas
+rasterio
+rioxarray
+geopandas
+shapely
+matplotlib
+scikit-image
+pyproj
+torch
+torchvision
+transformers
+tqdm
+folium
+click
+scipy
