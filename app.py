@@ -1,66 +1,52 @@
 import streamlit as st
-import pandas as pd
-from sentence_transformers import SentenceTransformer, util
+import openai
 
 st.set_page_config(page_title="Smart Supplier Advisor", layout="wide")
+st.title("🌐 Smart Supplier Advisor (Global Suppliers)")
 
-st.title("🚀 Smart Supplier Advisor")
-st.write("Find the best supplier for your product using AI and your custom criteria!")
+st.write("Find real suppliers worldwide using AI! Enter your product and preferences.")
 
-# ----- Supplier Data -----
-data = [
-    {"name":"Supplier A","product":"Widget","price":100,"reliability":8,"delivery_time":5,"location":"France","sustainability":7},
-    {"name":"Supplier B","product":"Gadget","price":120,"reliability":9,"delivery_time":6,"location":"Germany","sustainability":6},
-    {"name":"Supplier C","product":"Widget","price":90,"reliability":7,"delivery_time":4,"location":"Italy","sustainability":8},
-    {"name":"Supplier D","product":"Gadget","price":110,"reliability":6,"delivery_time":7,"location":"Spain","sustainability":9},
-    {"name":"Supplier E","product":"Widget","price":95,"reliability":9,"delivery_time":5,"location":"France","sustainability":8},
-]
-suppliers = pd.DataFrame(data)
-
-# ----- Load model -----
-@st.cache_resource
-def load_model():
-    return SentenceTransformer('all-MiniLM-L6-v2')
-model = load_model()
-
-# ----- User input -----
+# ----- User inputs -----
 product_input = st.text_input("Product to source:", "")
-preferred_location = st.selectbox("Preferred location:", ["Any"] + suppliers['location'].unique().tolist())
+preferred_region = st.selectbox("Preferred region:", ["Any", "Europe", "Asia", "North America", "South America", "Africa"])
+weight_price = st.slider("Importance of Price", 0, 10, 5)
+weight_reliability = st.slider("Importance of Reliability", 0, 10, 5)
+weight_delivery = st.slider("Importance of Delivery Time", 0, 10, 5)
+weight_sustainability = st.slider("Importance of Sustainability", 0, 10, 5)
+weight_certification = st.slider("Importance of Certification / Quality", 0, 10, 5)
 
-st.write("Adjust importance of each criterion (0 = low, 10 = high):")
-col1, col2, col3, col4, col5 = st.columns(5)
-with col1:
-    weight_price = st.slider("Price", 0, 10, 5)
-with col2:
-    weight_reliability = st.slider("Reliability", 0, 10, 5)
-with col3:
-    weight_delivery = st.slider("Delivery time", 0, 10, 5)
-with col4:
-    weight_location = st.slider("Location", 0, 10, 5)
-with col5:
-    weight_sustainability = st.slider("Sustainability", 0, 10, 5)
+openai_api_key = st.text_input("OpenAI API Key:", type="password")
 
-if st.button("Find best suppliers"):
-    if product_input.strip() == "":
-        st.warning("Please enter a product name.")
+if st.button("Find suppliers"):
+    if not product_input or not openai_api_key:
+        st.warning("Please enter product and OpenAI API Key.")
     else:
-        # Semantic similarity
-        product_emb = model.encode(product_input, convert_to_tensor=True)
-        supplier_embs = model.encode(suppliers['product'].tolist(), convert_to_tensor=True)
-        similarity_scores = util.cos_sim(product_emb, supplier_embs)[0].cpu().numpy()
-        suppliers['similarity'] = similarity_scores
+        openai.api_key = openai_api_key
 
-        # Weighted score
-        suppliers['score'] = (
-            weight_price * (1 / suppliers['price']) +
-            weight_reliability * suppliers['reliability'] +
-            weight_delivery * (1 / suppliers['delivery_time']) +
-            weight_location * suppliers['location'].apply(lambda x: 1 if preferred_location=="Any" or x==preferred_location else 0) +
-            weight_sustainability * suppliers['sustainability'] +
-            weight_price * suppliers['similarity']
-        )
+        prompt = f"""
+        You are an expert sourcing assistant. Provide a list of 5 real suppliers worldwide for the product "{product_input}".
+        Include the following columns in JSON format: 
+        name, country, estimated_price_usd, reliability_score_1_to_10, delivery_time_days, sustainability_score_1_to_10, certification_quality_score_1_to_10.
 
-        # Show top suppliers
-        top_suppliers = suppliers.sort_values(by='score', ascending=False).head(5)
-        st.subheader("🏆 Top Suppliers")
-        st.dataframe(top_suppliers[['name','product','price','reliability','delivery_time','location','sustainability','score']])
+        Consider these importance weights for ranking: 
+        Price={weight_price}, Reliability={weight_reliability}, Delivery={weight_delivery}, Sustainability={weight_sustainability}, Certification={weight_certification}.
+        Prefer suppliers in the region: {preferred_region}.
+        Only respond with valid JSON array.
+        """
+
+        with st.spinner("Querying suppliers..."):
+            response = openai.ChatCompletion.create(
+                model="gpt-4",
+                messages=[{"role":"user","content":prompt}],
+                temperature=0.3,
+                max_tokens=600
+            )
+
+        try:
+            import json
+            suppliers = json.loads(response.choices[0].message.content)
+            st.subheader("🏆 Top Suppliers")
+            st.dataframe(suppliers)
+        except Exception as e:
+            st.error("Failed to parse response from OpenAI. Here's raw output:")
+            st.code(response.choices[0].message.content)
