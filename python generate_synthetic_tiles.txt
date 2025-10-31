@@ -1,4 +1,0 @@
-This will create three files in `./data/`: `synthetic_rgb.tif`, `synthetic_temp.tif`, `synthetic_pop.tif`.
-
-
-## Run the Streamlit demo
