@@ -2,16 +2,109 @@ name,product_category,estimated_price_eur,reliability_score,delivery_time_days,s
 Danone,Dairy,2.5,9,3,8,9
 Lactalis,Dairy,2.1,9,4,7,9
 Sodiaal,Dairy,2.3,8,4,7,8
+La Boulangère,Dairy,2.4,8,5,7,8
+Laïta,Dairy,2.2,8,4,7,8
+Cid Lait,Dairy,2.5,7,5,7,7
+Fromagerie Guilloteau,Dairy,2.7,7,5,6,7
+Groupe Hervé,Dairy,2.6,7,6,6,7
+Groupe Coopératif Bretagne,Dairy,2.8,7,5,7,7
+Saputo France,Dairy,2.9,8,5,7,8
+Bongrain,Dairy,3.0,8,4,7,8
+Groupe Bel,Dairy,3.0,8,4,7,8
+Savencia,Dairy,3.2,8,5,7,8
+Fromagerie de la Brie,Dairy,3.1,7,5,6,7
+Entremont,Dairy,3.3,8,4,7,8
 Groupe Bel,Cheese,3.0,8,4,7,8
 Savencia Fromage & Dairy,Cheese,3.2,8,5,7,8
 Bongrain,Cheese,3.3,8,4,7,8
+Cabri,Dairy,2.9,7,5,6,7
+Chavroux,Cheese,2.8,7,5,6,7
+Isigny Sainte-Mère,Cheese,3.1,8,4,7,8
+Rians,Cheese,3.2,7,5,6,7
+Groupe Fromageries Occitanes,Cheese,3.0,7,6,6,7
+Groupe Berthaut,Cheese,3.1,7,5,6,7
+Groupe Rouzaire,Cheese,3.2,8,4,7,8
 Bonduelle,Vegetables & Fruits,1.8,8,5,8,8
 Les Crudettes,Vegetables & Fruits,2.6,6,4,8,6
 Agrial,Vegetables & Fruits,2.0,7,5,7,7
+Florette,Vegetables & Fruits,2.1,7,5,7,7
+Sicasil,Vegetables & Fruits,2.3,6,6,6,6
+Priméale,Vegetables & Fruits,2.2,7,5,7,7
+Cavac,Vegetables & Fruits,2.0,6,6,6,6
+Groupe Saint-Louis,Vegetables & Fruits,2.4,7,5,6,7
+Tartare,Vegetables & Fruits,2.5,7,4,7,7
+Groupe Prince de Bretagne,Vegetables & Fruits,2.1,8,5,7,7
+Groupe Coopératif Intermarché,Vegetables & Fruits,2.2,7,5,7,7
+Groupe Agrial,Vegetables & Fruits,2.0,6,6,6,6
+Groupe Sicolait,Vegetables & Fruits,2.3,7,5,7,7
+Agrial Primeurs,Vegetables & Fruits,2.2,7,5,7,7
+D'Aucy,Vegetables & Fruits,2.4,6,6,6,6
 Fleury Michon,Prepared Foods,4.5,8,5,6,8
 Sodebo,Prepared Foods,3.9,7,5,6,7
 Davigel,Prepared Foods,4.0,8,4,6,8
+Charal,Prepared Foods,5.3,8,5,5,8
+Groupe Bigard,Prepared Foods,5.5,7,6,5,8
+LDC (Groupe LDC),Prepared Foods,4.8,8,5,6,8
+Agromousquetaires,Prepared Foods,3.0,7,5,6,7
+Groupe Roullier,Prepared Foods,2.5,7,7,5,7
+Tereos,Prepared Foods,1.2,8,7,6,8
+Cristal Union,Prepared Foods,1.1,7,8,5,7
+Soufflet,Prepared Foods,1.6,8,6,6,8
+Andros,Prepared Foods,3.8,7,5,7,7
+Materne,Prepared Foods,3.2,7,5,6,7
+Boncolac,Prepared Foods,3.0,6,6,6,6
+La Compagnie des Desserts,Prepared Foods,3.1,7,5,6,7
 Groupe Avril,Oils & Proteins,2.9,7,6,6,7
 InVivo,Oils & Proteins,2.0,7,7,6,7
 Euralis,Oils & Proteins,2.2,7,6,6,7
+Puget,Oils & Proteins,3.0,8,5,7,8
+Isio,Oils & Proteins,2.8,7,6,6,7
+Fruit d'Or,Oils & Proteins,2.7,7,5,6,7
+La Tourangelle,Oils & Proteins,3.1,7,6,7,7
+Huilerie Croix Verte,Oils & Proteins,2.9,7,5,6,7
+Vandemoortele,Oils & Proteins,2.8,7,6,6,7
+Odyssée,Oils & Proteins,2.6,6,6,6,6
+Terres du Sud,Oils & Proteins,2.5,7,5,6,7
+Centrale Oleo,Oils & Proteins,2.7,7,6,6,7
+Südzucker,Oils & Proteins,2.9,7,5,6,7
+Tereos, Sugars & Ingredients,1.2,8,7,6,8
+Cristal Union, Sugars & Ingredients,1.1,7,8,5,7
+Soufflet, Sugars & Ingredients,1.6,8,6,6,8
+Poulain, Sugars & Ingredients,3.5,7,5,7,7
+Valrhona, Sugars & Ingredients,12.0,9,6,7,9
+Carambar & Co, Sugars & Ingredients,1.8,7,6,6,7
+Haribo France, Sugars & Ingredients,1.9,8,5,7,8
+Ferrero France, Sugars & Ingredients,3.2,8,4,7,8
+Nestlé France, Sugars & Ingredients,2.5,7,5,7,7
+Cargill France, Sugars & Ingredients,2.7,7,5,6,7
+Biscuiterie Poult,Bakery & Pastry,2.8,7,6,6,7
+Groupe Holder (Paul),Bakery & Pastry,3.1,8,3,6,8
+La Boulangère,Bakery & Pastry,2.4,7,4,6,7
+St Michel,Bakery & Pastry,2.6,7,5,6,7
+Brossard,Bakery & Pastry,2.9,7,6,6,7
+La Mie Câline,Bakery & Pastry,3.0,7,5,6,7
+Groupe Picard,Bakery & Pastry,3.2,8,4,6,8
+Casino Poultry,Poultry & Meat,4.0,7,5,6,7
+Charal,Poultry & Meat,5.3,8,5,5,8
+Groupe Bigard,Poultry & Meat,5.5,7,6,5,8
+LDC (Groupe LDC),Poultry & Meat,4.8,8,5,6,8
+Cooperl Arc Atlantique,Poultry & Meat,5.0,7,6,5,7
+Poultry Coop France,Poultry & Meat,4.5,7,5,6,7
+Sicasil,Poultry & Meat,2.9,6,7,6,6
+Davigel,Poultry & Meat,4.0,8,4,6,8
+Labeyrie,Frozen Foods,4.2,9,3,6,8
+Picard Surgelés,Frozen Foods,4.2,9,3,6,8
+Findus,Frozen Foods,3.9,8,5,6,7
+Nestlé France,Frozen Foods,3.5,8,4,6,7
+Bofrost,Frozen Foods,3.8,7,5,6,7
+Bonduelle Frozen,Frozen Foods,3.6,7,5,6,7
+Sicasil Frozen,Frozen Foods,3.2,7,6,6,7
+Agrial Frozen,Frozen Foods,3.1,7,5,6,7
+Tereos Frozen,Frozen Foods,3.0,6,6,6,6
+Lesaffre,Yeasts & Fermentation,6.0,8,6,7,9
+Fermentis,Yeasts & Fermentation,5.5,7,6,6,8
+LeSaffre Ingredients,Yeasts & Fermentation,5.8,8,5,7,8
+Groupe Lesaffre,Yeasts & Fermentation,6.1,8,6,7,9
+Lesaffre Bakery,Yeasts & Fermentation,5.9,8,5,7,8
+Biotech Lesaffre,Yeasts & Fermentation,6.0,7,6,7,8
 ...
